@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Location} from "@angular/common";
-import {MovieService} from "../shared/movie.service";
+import {Location} from '@angular/common';
+import {MovieService} from '../shared/movie.service';
 
 @Component({
   selector: 'app-movie-new',
@@ -24,9 +24,9 @@ export class MovieNewComponent implements OnInit {
         year,
         rentalPrice
       })
-      .subscribe(movie=>this.location.back(),
-        err=>console.log("Error in saving movie",err),
-        ()=>console.log("save movie complete"));
+      .subscribe(movie => this.location.back(),
+        err => console.log('Error in saving movie', err),
+        () => console.log('save movie complete'));
   }
 
   goBack() {

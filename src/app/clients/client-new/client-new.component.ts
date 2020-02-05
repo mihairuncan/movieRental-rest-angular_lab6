@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ClientService} from "../shared/client.service";
-import {Location} from "@angular/common";
+import {ClientService} from '../shared/client.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-client-new',
@@ -17,7 +17,7 @@ export class ClientNewComponent implements OnInit {
   }
 
   save(firstName, lastName, dateOfBirth, cnp) {
-    console.log('save works: ', firstName, ";", lastName, ";", dateOfBirth, ";", cnp, ";");
+    console.log('save works: ', firstName, ';', lastName, ';', dateOfBirth, ';', cnp, ';');
 
     this.clientService.save(
       {
@@ -27,8 +27,8 @@ export class ClientNewComponent implements OnInit {
         cnp
       })
       .subscribe(client => this.location.back(),
-        err => console.log("Error in saving client", err),
-        () => console.log("save client complete"));
+        err => console.log('Error in saving client', err),
+        () => console.log('save client complete'));
   }
 
   goBack() {

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Movie} from "../shared/movie.model";
-import {MovieService} from "../shared/movie.service";
-import {Router} from "@angular/router";
+import {Movie} from '../shared/movie.model';
+import {MovieService} from '../shared/movie.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-movies-list',
@@ -34,7 +34,7 @@ export class MoviesListComponent implements OnInit {
       .subscribe(_ => {
         console.log('movie deleted');
         this.movies = this.movies.filter(movieAux => movieAux.id !== movie.id);
-      })
+      });
   }
 
   goToDetails() {

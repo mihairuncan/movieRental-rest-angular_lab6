@@ -4,4 +4,5 @@ export class Movie {
   genre: string;
   year: number;
   rentalPrice: number;
+  clients: number[];
 }

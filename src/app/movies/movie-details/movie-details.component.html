@@ -26,6 +26,11 @@
     </div>
     <button (click)="goBack()" class="btn btn-secondary mr-2">Back</button>
     <button (click)="update()" class="btn btn-warning mr-2">Update</button>
+    <div *ngIf="clients.length>0">
+      <br>
+      <h4>Clients who rented {{movie.name}}:</h4>
+      <p *ngFor="let client of clients"><b>{{client.clientName}}</b> on {{client.pickUpDate | date}}</p>
+    </div>
   </div>
 </div>
 
